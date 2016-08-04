@@ -1,8 +1,8 @@
 
 pomExtra := {
   <scm>
-    <url>https://github.com/workingDog/WebvrCesium</url>
-    <connection>scm:git:git@github.com:workingDog/WebvrCesium.git</connection>
+    <url>https://github.com/workingDog/webvrcesium</url>
+    <connection>scm:git:git@github.com:workingDog/webvrcesium.git</connection>
   </scm>
     <developers>
       <developer>
