@@ -1,20 +1,22 @@
+import com.kodekutters._
 import cesium._
 import cesiumOptions._
 import CesiumImplicits._
-import org.scalajs.dom.experimental.webvr.VRDisplay
 
-import scala.scalajs.js.{Date, JSApp}
-import scala.scalajs.js
-import scala.language.implicitConversions
+import org.scalajs.dom
+import org.scalajs.dom.Navigator
 import org.scalajs.dom.window
 
+import scala.scalajs.js
+import scala.scalajs.js.{Date, JSApp}
+import scala.language.implicitConversions
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.util.{Failure, Success}
 
 
 /**
-  * an example using WebVR Scala ("org.scala-js" %%% "scalajs-dom" % "0.9.2-SNAPSHOT") and
-  * CesiumScala "com.github.workingDog" %%% "cesiumscala" % "1.3-SNAPSHOT"
+  * an example using WebVR Scala ("com.github.workingDog" %%% "webvrscala" % "0.1-SNAPSHOT") and
+  * CesiumScala "com.github.workingDog" %%% "cesiumscala" % "1.4"
   *
   * ref: https://github.com/AnalyticalGraphicsInc/cesium/blob/master/Apps/Sandcastle/gallery/Cardboard.html
   *
@@ -27,6 +29,8 @@ import scala.util.{Failure, Success}
   *
   */
 object WebvrApp extends JSApp {
+
+  implicit def navigatorExt(navigator: Navigator): NavigatorWebVR = navigator.asInstanceOf[NavigatorWebVR]
 
   def main(): Unit = {
 
@@ -43,7 +47,7 @@ object WebvrApp extends JSApp {
           start(dispArr(0))
         }
 
-      case Failure(f) => Console.println("fail to get the displays")
+      case Failure(f) => Console.println("fail to get any displays")
     }
 
   }
