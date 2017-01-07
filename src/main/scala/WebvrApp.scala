@@ -30,11 +30,11 @@ import scala.util.{Failure, Success}
   */
 object WebvrApp extends JSApp {
 
-  implicit def navigatorExt(navigator: Navigator): NavigatorWebVR = navigator.asInstanceOf[NavigatorWebVR]
+  import com.kodekutters.webvr._
 
   def main(): Unit = {
 
-    Console.println("---> hello from WebvrApp")
+    Console.println("---> hello xx WebvrApp")
 
     // check we have a valid VR display
     window.navigator.getVRDisplays().toFuture onComplete {
