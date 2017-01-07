@@ -34,7 +34,7 @@ object WebvrApp extends JSApp {
 
   def main(): Unit = {
 
-    Console.println("---> hello xx WebvrApp")
+    Console.println("---> hello from WebvrApp")
 
     // check we have a valid VR display
     window.navigator.getVRDisplays().toFuture onComplete {

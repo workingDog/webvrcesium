@@ -12,7 +12,7 @@ This example is a Scala version of [Cesium Cardboard](https://github.com/Analyti
 
 See the build.sbt file for the library dependencies. 
 
-Using SBT 0.13.13 and scala.js 0.6.13
+Using SBT 0.13.13 and scala.js 0.6.14
 
 
 ## Installation 
